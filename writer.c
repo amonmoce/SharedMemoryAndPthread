@@ -9,14 +9,14 @@ int main(){
   key_t key;
   char *shared_memory;
   char *sum;
-  
+
   key = 9876;
   shared_memory_id = shmget(key, MEM_SIZE, IPC_CREAT | 0666);
   shared_memory = shmat(shared_memory_id, NULL, 0);
 
 
 
-  memcpy(shared_memory, sum, strlen(sum))
+  memcpy(shared_memory, sum, strlen(sum));
 
   return 0;
 }
